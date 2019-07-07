@@ -30,7 +30,7 @@ static char** _zbar_code_scanner(
     int format = *(int *) "Y800";
     char **data = NULL;
 
-    zbar_image_scanner_t *scanner = zbar_image_scanner_create();
+    zbar_image_scanner_t *scanner = zbar_scanner_create();
     zbar_image_scanner_set_config(scanner, 0, ZBAR_CFG_ENABLE, 0); /* disable all symbologies */
     for (int i=0; i < symbologies->number; i++) {
         zbar_image_scanner_set_config(scanner, symbologies->symbologie[i], ZBAR_CFG_ENABLE, 1);
