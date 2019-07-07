@@ -36,7 +36,7 @@ static char** _zbar_code_scanner(
         zbar_image_scanner_set_config(scanner, symbologies->symbologie[i], ZBAR_CFG_ENABLE, 1);
     }
 
-    zbar_image_t *image = zbar_image_create();
+    zbar_scanner_t *image = zbar_image_create();
     zbar_image_set_format(image, format);
     zbar_image_set_size(image, width, height);
     zbar_image_set_data(image, raw_image_data, raw_image_data_length, NULL);
